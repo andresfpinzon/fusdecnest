@@ -1,10 +1,9 @@
-// src/modules/attendance/attendance.controller.ts
-
 import { Controller, Get, Post, Body, Param, Delete, Put, UseGuards, Query } from '@nestjs/common';
 import { AttendanceService } from './attendance.service';
 import { AuthGuard } from '@nestjs/passport';
-import { Roles } from '../auth/roles.decorator'; // Verifica que esta ruta sea correcta
-import { Role } from '../auth/role.enum';
+// Asegúrate de que la ruta sea correcta
+import { Roles } from '../../auth/roles.decorator'; // Verifica que esta ruta sea correcta
+import { Role } from '../../auth/role.enum'; // Verifica que esta ruta sea correcta y que el archivo exista
 
 @Controller('attendances')
 @UseGuards(AuthGuard('jwt'))
@@ -40,4 +39,8 @@ export class AttendanceController {
     async remove(@Param('id') id: string) {
         return this.attendanceService.remove(id);
     }
+}
+
+export class Attendance {
+    // ... propiedades y métodos de la entidad ...
 }
