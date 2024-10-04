@@ -2,7 +2,6 @@
 
 import { Controller, Get, Post, Body, Param, Delete, Put, UseGuards, Query } from '@nestjs/common';
 import { AttendanceService } from './attendance.service';
-import { Attendance } from './attendance.entity';
 import { AuthGuard } from '@nestjs/passport';
 import { Roles } from '../auth/roles.decorator'; // Verifica que esta ruta sea correcta
 import { Role } from '../auth/role.enum';
