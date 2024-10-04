@@ -1,5 +1,5 @@
 import { Controller, Get, Post, Put, Delete, Body, Param, Query, UseGuards } from '@nestjs/common';
-import { StudentsService } from './students.service';
+import { StudentsService } from './student.service'; // Verifica que esta ruta sea correcta
 import { Student } from './student.entity';
 import { AuthGuard } from '@nestjs/passport';
 import { Roles } from '../auth/roles.decorator';

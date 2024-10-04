@@ -19,7 +19,7 @@ export class StudentsService {
 
     async findOne(id: string): Promise<Student> {
         // Cambiar el método para usar un objeto de opciones
-        return this.studentRepository.findOne({ where: { id } });
+        return this.studentRepository.findOne({ where: { id: Number(id) } });
     }
 
     async create(student: Student): Promise<Student> {
